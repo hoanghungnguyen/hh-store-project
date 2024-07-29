@@ -23,7 +23,7 @@
         <div id="container">
             <div id="header-wp">
                 <div class="wp-inner clearfix">
-                    <a href="?page=list_post" title="" id="logo" class="fl-left">ADMIN</a>
+                    <a href="?" title="" id="logo" class="fl-left">ADMIN</a>
                     <ul id="main-menu" class="fl-left">
                         <li>
                             <a href="?page=list_post" title="">Trang</a>

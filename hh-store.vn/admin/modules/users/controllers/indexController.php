@@ -134,7 +134,12 @@ function editAction()
     show_array($item);
 }
 
-function addAction()
+function updateAction()
 {
-    echo "Thêm dữ liệu";
+    load_view('update');
+}
+
+function resetAction()
+{
+    load_view('reset');
 }
