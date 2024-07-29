@@ -23,7 +23,7 @@
         <div id="container">
             <div id="header-wp">
                 <div class="wp-inner clearfix">
-                    <a href="?" title="" id="logo" class="fl-left">ADMIN</a>
+                    <a href="?" title="" id="logo" class="fl-left">Admin</a>
                     <ul id="main-menu" class="fl-left">
                         <li>
                             <a href="?page=list_post" title="">Trang</a>
@@ -85,7 +85,7 @@
                             <div id="thumb-circle" class="fl-left">
                                 <img src="public/images/img-admin.png">
                             </div>
-                            <h3 id="account" class="fl-right">Admin</h3>
+                            <h3 id="account" class="fl-right"><?php if (!empty(user_login())) echo user_login(); ?></h3>
                         </button>
                         <ul class="dropdown-menu">
                             <li><a href="?mod=users&action=update" title="Thông tin cá nhân">Thông tin tài khoản</a>
