@@ -1,14 +1,15 @@
 <?php get_header(); ?>
 <div id="main-content-wp" class="list-post-page">
+    <div class="section" id="title-page">
+        <div class="clearfix">
+            <a href="?page=add_cat" title="" id="add-new" class="fl-left">Thêm mới</a>
+            <h3 id="index" class="fl-left">Nhóm quản trị</h3>
+        </div>
+    </div>
     <div class="wrap clearfix">
         <?php get_sidebar('users'); ?>
         <div id="content" class="fl-right">
-            <div class="section" id="title-page">
-                <div class="clearfix">
-                    <h3 id="index" class="fl-left">Nhóm quản trị</h3>
-                    <a href="?page=add_cat" title="" id="add-new" class="fl-left">Thêm mới</a>
-                </div>
-            </div>
+
             <div class="section" id="detail-page">
                 <div class="section-detail">
                     <div class="filter-wp clearfix">
