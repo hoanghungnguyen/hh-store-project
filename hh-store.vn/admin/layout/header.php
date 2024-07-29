@@ -83,7 +83,7 @@
                         <button class="dropdown-toggle clearfix" type="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="true">
                             <div id="thumb-circle" class="fl-left">
-                                <img src="public/images/img-admin.png">
+                                <img src="public/images/admin.jpg">
                             </div>
                             <h3 id="account" class="fl-right"><?php if (!empty(user_login())) echo user_login(); ?></h3>
                         </button>
