@@ -8,10 +8,10 @@
     <link href="public/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="public/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
     <link href="public/reset.css" rel="stylesheet" type="text/css" />
+
     <link href="public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="public/style.css" rel="stylesheet" type="text/css" />
     <link href="public/responsive.css" rel="stylesheet" type="text/css" />
-
     <script src="public/js/jquery-2.2.4.min.js" type="text/javascript"></script>
     <script src="public/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
     <script src="public/js/plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
