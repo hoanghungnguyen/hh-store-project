@@ -1,6 +1,6 @@
 /*LIST*/
 #header-wp {
-  background: #4fa327;
+  background: #22c0ff;
 }
 #main-menu li {
   float: left;
@@ -19,7 +19,7 @@
 }
 #thumb-circle {
   display: block;
-  border: 1px solid #5bff50;
+  border: 1px solid #2affa17a;
   /* padding: 4px 8px; */
   width: 42px;
   background: #ddd;
@@ -44,7 +44,7 @@
 #add-new {
   display: inline-block;
   color: #fff;
-  background: #4fa327;
+  background: #22c0ff;
   padding: 4px 15px;
   margin: 20px;
 }
@@ -173,7 +173,7 @@
   text-align: center;
   color: #fff;
   font-size: 13px;
-  background: #4fa327;
+  background: #22c0ff;
   padding: 10px 0px;
 }
 
