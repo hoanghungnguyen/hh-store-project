@@ -129,17 +129,18 @@ function updateAction()
 
 
             update_user_login(user_login(), $data);
+            echo "<p style='position: absolute; bottom: -20px; left: 402px;' class='update'>Cập nhật thành công</p>";
         } else {
-            $error['account'] = "Thông tin sai, không thể cập nhật !";
+            $error['account'] = "Thông tin không đúng yêu cầu, vui lòng nhập lại !";
         }
-        $info_user = get_user_by_username(user_login());
-        $data['info_user'] = $info_user;
     }
+    $info_user = get_user_by_username(user_login());
+    $data['info_user'] = $info_user;
 
     // show_array($data);
+
     load_view('update', $data);
 }
-
 function resetAction()
 {
     load_view('reset');
