@@ -1,0 +1,60 @@
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 23px;
+}
+.content {
+  min-height: 620px;
+}
+.footer {
+  text-align: center;
+  padding: 6px;
+}
+.wrapper {
+  width: 960px;
+  margin: 0px auto;
+}
+
+.header,
+.footer {
+  background-color: rgb(255, 43, 213);
+}
+
+ul.menu {
+  text-align: center;
+}
+
+ul.menu li {
+  display: inline-block;
+  padding: 12px;
+}
+ul.menu li a {
+  padding: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 18px;
+  padding: 20px 0;
+}
+
+table thead tr td {
+  font-weight: bold;
+}
+
+table tr td {
+  border: 1px solid #c5c5c5;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 0px 25px;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+}
