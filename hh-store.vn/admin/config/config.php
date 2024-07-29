@@ -12,7 +12,7 @@ ob_start();
  * 
  */
 
-$config['base_url'] = "http://localhost/Php-Master/lesson/section-28/projectmvc.vn/";
+$config['base_url'] = "http://localhost/Php-Master/project/hh-store.vn/admin";
 
 
 $config['default_module'] = 'home';
