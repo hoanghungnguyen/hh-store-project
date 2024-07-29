@@ -15,16 +15,16 @@ get_header();
                 <div class="section-detail">
                     <form method="POST">
                         <label for="display-name">Tên hiển thị</label>
-                        <input type="text" name="display-name" id="display-name">
+                        <input type="text" name="fullname" id="display-name">
                         <label for="username">Tên đăng nhập</label>
                         <input type="text" name="username" id="username" placeholder="admin" readonly="readonly">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email">
                         <label for="tel">Số điện thoại</label>
-                        <input type="tel" name="tel" id="tel">
+                        <input type="tel" name="phone_number" id="tel">
                         <label for="address">Địa chỉ</label>
                         <textarea name="address" id="address"></textarea>
-                        <button type="submit" name="btn-submit" id="btn-submit">Cập nhật</button>
+                        <button type="submit" name="btn-update" id="btn-submit">Cập nhật</button>
                     </form>
                 </div>
             </div>

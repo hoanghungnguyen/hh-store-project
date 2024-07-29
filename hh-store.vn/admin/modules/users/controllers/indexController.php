@@ -71,7 +71,11 @@ function logoutAction()
 
 function updateAction()
 {
-    load_view('update');
+
+    $info_user = get_user_by_username(user_login());
+    $data['info_user'] = $info_user;
+    show_array($data);
+    load_view('update', $data);
 }
 
 function resetAction()
