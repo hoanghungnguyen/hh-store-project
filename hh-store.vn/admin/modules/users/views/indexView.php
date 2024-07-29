@@ -21,13 +21,13 @@ get_header();
                 foreach ($list_users as $user) {
                     $t++;
             ?>
-                    <tr>
-                        <td><?php echo $t; ?></td>
-                        <td><?php echo $user['fullname'] ?></td>
-                        <td><?php echo $user['gmail'] ?></td>
-                        <td><?php echo $user['age'] ?></td>
-                        <td><?php echo currency_format($user['earn'], '$'); ?></td>
-                    </tr>
+            <tr>
+                <td><?php echo $t; ?></td>
+                <td><?php echo $user['fullname'] ?></td>
+                <td><?php echo $user['gmail'] ?></td>
+                <td><?php echo $user['age'] ?></td>
+                <td><?php echo currency_format($user['earn'], '$'); ?></td>
+            </tr>
             <?php
                 }
             }

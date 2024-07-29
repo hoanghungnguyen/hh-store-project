@@ -19,5 +19,5 @@ $db = array(
     'hostname' => 'localhost',
     'username' => 'root',
     'password' => '',
-    'database' => 'hh_shop',
+    'database' => 'db_hh_store.vn',
 );

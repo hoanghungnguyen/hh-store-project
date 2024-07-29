@@ -1,9 +1,9 @@
-    <!-- </body>
-</html> -->
-    <div class="footer">
-        <p class="desc">Footer</p>
+<div id="footer-wp">
+    <div class="wp-inner">
+        <p id="copyright">2018 © Admin Theme by Php Master</p>
     </div>
-    </div>
-    </body>
-
-    </html>
+</div>
+</div>
+</div>
+</body>
+</html>
