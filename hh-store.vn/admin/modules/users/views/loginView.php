@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <?php
+    echo date("d/m/Y h:m:s"); ?>
     <div id="wp-form-login">
         <h1 id="page-title">ĐĂNG NHẬP</h1>
         <form id="form-login" action="" method="POST">
