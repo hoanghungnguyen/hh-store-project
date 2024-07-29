@@ -7,6 +7,14 @@ function is_username($username)
     return TRUE;
 }
 
+function is_phone_number($phone_number)
+{
+    $partten = "/^[0-9]{8,11}$/";
+    if (!preg_match($partten, $phone_number, $matchs))
+        return FALSE;
+    return TRUE;
+}
+
 function is_password($password)
 {
     $partten = "/^([\w_\.!@#$%^&*()]+){5,31}$/";

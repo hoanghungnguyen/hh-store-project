@@ -71,8 +71,8 @@ function logoutAction()
 
 function updateAction()
 {
+    global $error, $address, $phone_number, $email, $fullName;
     if (isset($_POST['btn-update'])) {
-        global $error, $username, $address, $phone_number, $email, $fullName;
         $error = array();
         if (empty($_POST['fullname'])) {
             //hạ cờ
@@ -82,23 +82,23 @@ function updateAction()
         }
 
         //kiểm tra email
-        if (empty($_POST['username'])) {
-            $error['username'] = 'Tên đăng nhập không được để trống';
-        } else {
-            if (!is_username($_POST['username'])) {
-                $error['username'] = 'Tên đăng nhập không đúng định dạng';
-            } else {
-                $username = $_POST['username'];
-            }
-        }
+        // if (empty($_POST['username'])) {
+        //     $error['username'] = 'Tên đăng nhập không được để trống';
+        // } else {
+        //     if (!is_username($_POST['username'])) {
+        //         $error['username'] = 'Tên đăng nhập không đúng định dạng';
+        //     } else {
+        //         $username = $_POST['username'];
+        //     }
+        // }
 
-        if (empty($_POST['gmail'])) {
-            $error['gmail'] = 'Gmail không được để trống';
+        if (empty($_POST['email'])) {
+            $error['email'] = 'Gmail không được để trống';
         } else {
-            if (!is_email($_POST['gmail'])) {
-                $error['gmail'] = "Gmail không đúng định dạng";
+            if (!is_email($_POST['email'])) {
+                $error['email'] = "Gmail không đúng định dạng";
             } else {
-                $email = $_POST['gmail'];
+                $email = $_POST['email'];
             }
         }
 
@@ -106,19 +106,18 @@ function updateAction()
             //hạ cờ
             $error['address'] = 'Địa chỉ không được để trống';
         } else {
-            $fullName = $_POST['address'];
+            $address = $_POST['address'];
         }
 
-        if (empty($_POST['username'])) {
-            $error['username'] = 'Tên đăng nhập không được để trống';
+        if (empty($_POST['phone_number'])) {
+            $error['phone_number'] = 'số điện thoại không được để trống';
         } else {
-            if (!is_username($_POST['username'])) {
-                $error['username'] = 'Tên đăng nhập không đúng định dạng';
+            if (!is_phone_number($_POST['phone_number'])) {
+                $error['phone_number'] = 'Số điện thoại sai định dạng';
             } else {
-                $username = $_POST['username'];
+                $phone_number = $_POST['phone_number'];
             }
         }
-
 
         if (empty($error)) {
             $data = array(
@@ -127,12 +126,16 @@ function updateAction()
                 'address' => $address,
                 'phone_number' => $phone_number
             );
+
+
             update_user_login(user_login(), $data);
+        } else {
+            $error['account'] = "Thông tin sai, không thể cập nhật !";
         }
+        $info_user = get_user_by_username(user_login());
+        $data['info_user'] = $info_user;
     }
 
-    $info_user = get_user_by_username(user_login());
-    $data['info_user'] = $info_user;
     // show_array($data);
     load_view('update', $data);
 }

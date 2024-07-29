@@ -59,5 +59,5 @@ function get_user_by_username($username)
 
 function update_user_login($username, $data)
 {
-    db_update('tbl_users', $data, "`username` = '{$username}");
+    db_update('tbl_users', $data, "`username` = '{$username}'");
 }
