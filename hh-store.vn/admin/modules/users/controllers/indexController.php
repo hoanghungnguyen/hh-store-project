@@ -71,10 +71,69 @@ function logoutAction()
 
 function updateAction()
 {
+    if (isset($_POST['btn-update'])) {
+        global $error, $username, $address, $phone_number, $email, $fullName;
+        $error = array();
+        if (empty($_POST['fullname'])) {
+            //hạ cờ
+            $error['fullname'] = 'Họ và tên không được để trống';
+        } else {
+            $fullName = $_POST['fullname'];
+        }
+
+        //kiểm tra email
+        if (empty($_POST['username'])) {
+            $error['username'] = 'Tên đăng nhập không được để trống';
+        } else {
+            if (!is_username($_POST['username'])) {
+                $error['username'] = 'Tên đăng nhập không đúng định dạng';
+            } else {
+                $username = $_POST['username'];
+            }
+        }
+
+        if (empty($_POST['gmail'])) {
+            $error['gmail'] = 'Gmail không được để trống';
+        } else {
+            if (!is_email($_POST['gmail'])) {
+                $error['gmail'] = "Gmail không đúng định dạng";
+            } else {
+                $email = $_POST['gmail'];
+            }
+        }
+
+        if (empty($_POST['address'])) {
+            //hạ cờ
+            $error['address'] = 'Địa chỉ không được để trống';
+        } else {
+            $fullName = $_POST['address'];
+        }
+
+        if (empty($_POST['username'])) {
+            $error['username'] = 'Tên đăng nhập không được để trống';
+        } else {
+            if (!is_username($_POST['username'])) {
+                $error['username'] = 'Tên đăng nhập không đúng định dạng';
+            } else {
+                $username = $_POST['username'];
+            }
+        }
+
+
+        if (empty($error)) {
+            $data = array(
+                'fullname' => $fullName,
+                'email' => $email,
+                'address' => $address,
+                'phone_number' => $phone_number
+            );
+            update_user_login(user_login(), $data);
+        }
+    }
 
     $info_user = get_user_by_username(user_login());
     $data['info_user'] = $info_user;
-    show_array($data);
+    // show_array($data);
     load_view('update', $data);
 }
 

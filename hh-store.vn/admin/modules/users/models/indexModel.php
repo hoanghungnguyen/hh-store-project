@@ -56,3 +56,8 @@ function get_user_by_username($username)
     if (!empty($item))
         return $item;
 }
+
+function update_user_login($username, $data)
+{
+    db_update('tbl_users', $data, "`username` = '{$username}");
+}

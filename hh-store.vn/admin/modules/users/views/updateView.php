@@ -15,15 +15,18 @@ get_header();
                 <div class="section-detail">
                     <form method="POST">
                         <label for="display-name">Tên hiển thị</label>
-                        <input type="text" name="fullname" id="display-name">
+                        <input type="text" name="fullname" id="display-name"
+                            value="<?php echo $info_user['fullname']; ?>">
                         <label for="username">Tên đăng nhập</label>
-                        <input type="text" name="username" id="username" placeholder="admin" readonly="readonly">
+                        <input type="text" name="username" value="<?php echo $info_user['username']; ?>" id=" username"
+                            readonly="readonly">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
-                        <label for="tel">Số điện thoại</label>
-                        <input type="tel" name="phone_number" id="tel">
+                        <input type="email" name="email" id="email" value="<?php echo $info_user['email']; ?>">
+                        <label for=" tel">Số điện thoại</label>
+                        <input type="tel" name="phone_number" value="<?php echo $info_user['phone_number']; ?>"
+                            id="tel">
                         <label for="address">Địa chỉ</label>
-                        <textarea name="address" id="address"></textarea>
+                        <textarea name="address" id="address"><?php echo $info_user['address']; ?></textarea>
                         <button type="submit" name="btn-update" id="btn-submit">Cập nhật</button>
                     </form>
                 </div>
